@@ -1,0 +1,41 @@
+[project]
+name = "gym_mf_envs"
+authors = [
+    {name = "Yue Guan", email = "yguan44@gatech.edu"},
+    {name = "Bhavini Jeloka", email = "bjeloka3@gatech.edu"},
+]
+description = "MF-Envs: The Mean-Field Multi-Agent Environment"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+keywords = [
+    "Multi-Agent",
+    "Reinforcement Learning",
+    "RL",
+    "MARL",
+    "Deep Learning",
+    "OpenAI Gym",
+]
+classifiers = [
+    "Development Status :: 1 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+#todo update dependencies inequality
+dependencies = [
+    "numpy ==1.23.1",
+    "gym ==0.26.0",
+    "pygame",
+    "imageio"
+]
+dynamic = ["version"]
+
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+include = ["gym_mf_envs*"]  # Include the actual package and its subpackages.
+exclude = ["test_codes"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = true
